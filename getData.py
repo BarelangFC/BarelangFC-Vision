@@ -1,7 +1,7 @@
 import numpy as np
 import cv2
 
-IMAGE_RGB_PATH = "../DOcuments/data_{:01d}.jpg"
+IMAGE_RGB_PATH = "../Documents/data_{:01d}.jpg"
 #IMAGE_GRAY_PATH = "../getData/Gray/gambar_{:01d}.jpg"
 
 def main():
