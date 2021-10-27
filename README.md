@@ -40,19 +40,17 @@ chmod +x ./linux_mark.sh
 After that mark the image according to the specified obj.names, don't get it wrong
 
 ## 3. Train / learning data
-```
-./darknet detector train obj.data yolov3-tiny_2021.cfg darknet53.conv.74
-```
-It's for learning image _yolov3-tiny_2021.cfg_ is a custom our config file
-```
-./darknet detector calc_anchors obj.data -num_of_clusters 9 -width 416 -height 416 
-```
-It's for calc anchors
-
-## 4. Demo / using data to robot
 After install all requirements you can get or clone from 
 ``` 
 git clone https://github.com/AlexeyAB/darknet.git
+```
+It's for learning image _yolov3-tiny_2021.cfg_ is a custom our config file
+```
+./darknet detector train obj.data yolov3-tiny_2021.cfg darknet53.conv.74
+```
+It's for calc anchors
+```
+./darknet detector calc_anchors obj.data -num_of_clusters 9 -width 416 -height 416 
 ```
 * and next prepare data in yolo_mark
 * copy img, obj.data, obj.names, train.txt
@@ -71,5 +69,6 @@ copy the result, paste it into the anchor in the cfg
 ```
 ./darknet detector train cfg/obj.data cfg/yolov3-tiny_tes.cfg darknet53.conv.74
 ```
-All the command text you can create custom files.sh as you want, thank you that's enough from us and enjoy to learn.
 
+## Demo / using data to robot
+After all the data of image is learned by computer you only put the cfg file and weight file for using on your custom vision and now you can using it and explore and all the command text you can create custom files.sh as you want, thank you that's enough from us and enjoy to learn.
